@@ -1,0 +1,141 @@
+# ============ IGNORAR POR DEFECTO ============
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+**/.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
+# ============ INCLUIR ARCHIVOS CLAVE ============
+!.gitignore
+!pubspec.yaml
+!pubspec.lock
+!README.md
+!.metadata
+!analysis_options.yaml
+
+# ============ INCLUIR ASSETS COMPLETO ============
+!/assets/**
+
+# ============ INCLUIR CÓDIGO FLUTTER ============
+!/lib/**
+!/test/**
+
+# ============ INCLUIR ANDROID ESENCIAL ============
+!/android/app/src/main/**
+/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+/android/legacy/**
+!/android/app/build.gradle
+!/android/app/build.gradle.kts
+!/android/build.gradle
+!/android/build.gradle.kts
+!/android/gradle.properties
+!/android/settings.gradle
+!/android/settings.gradle.kts
+!/android/gradlew
+!/android/gradlew.bat
+!/android/gradle/wrapper/**
+!/android/local.properties  # Importante para configuraciones locales
+
+# Archivos de credenciales sensibles
+client_secret_*.json
+*.json
+/client_secret_*.json
+app/client_secret_*.json
+app/*/client_secret_*.json
+
+# Firebase/Google config files (opcional pero recomendado)
+google-services.json
+GoogleService-Info.plist
+
+# ============ INCLUIR KEYSTORE (OPCIONAL) ============
+# !/android/key.properties
+# !/android/app/keystores/**
+
+# ============ EXCLUIR SIEMPRE ============
+# Builds y cachés
+
+/.dart_tool/
+/.pub-cache/
+/.packages
+/.pub/
+/.flutter-plugins
+/.flutter-plugins-dependencies
+/cmd
+
+/build/*
+!/build/app/outputs/bundle/release/app-release.aab
+!/build/app/outputs/flutter-apk/app-release.apk
+
+
+
+# Otras plataformas
+#/ios/
+/linux/
+/macos/
+/web/
+/windows/
+
+# Builds generados
+/android/app/build/**
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+/ios/build/
+
+# ============ INCLUIR iOS ESENCIAL PARA CODEMAGIC ============
+!/ios/Runner/**
+!/ios/Runner.xcodeproj/project.pbxproj
+!/ios/Runner.xcodeproj/xcshareddata/**
+!/ios/Runner.xcworkspace/contents.xcworkspacedata
+!/ios/Flutter/**
+!/ios/Podfile
+!/ios/Podfile.lock
+!/ios/ServiceDefinitions.json
+
+
+
+
+# ============ EXCLUIR BUILD Y CACHÉ ============
+/.dart_tool/
+/.pub-cache/
+/.pub/
+/build/
+/ios/DerivedData/
+/ios/build/
+/android/app/build/
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+
+# ============ INCLUIR OUTPUTS DE BUILD ESPECÍFICOS (opcional) ============
+# !/build/app/outputs/bundle/release/app-release.aab
+# !/build/app/outputs/flutter-apk/app-release.apk
+# !/build/ios/ipa/*.ipa
+
+# ============ OTRAS PLATAFORMAS (opcional mantener excluidas) ============
+/linux/
+/macos/
+/web/
+/windows/
+
+assets/images/icons/.DS_Store
+
+# Environment secrets — never commit
+.env
+.env.*
+!.env.example
+
+# App PEM certificates (project-specific) — regenerate with flutter_tools.sh genpem
+assets/raw/flutter_app_*.pem
+assets/raw/*_trust.pem
+assets/raw/*_certs.pem
+assets/raw/*_pubkey.pem
+android/local.properties
+android/app/lint-baseline.xml
+android/lint-baseline.xml
+key.properties
